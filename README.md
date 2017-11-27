@@ -37,3 +37,18 @@ CREATE A SCREENSHOT OF THE DATABASE YOU IMPORTED AND COMMIT IT TO THE REPO
  - [C#](cs.md)
  - [Java](java.md)
  - [JavaScript](javascript.md)
+
+
+Question time
+
+Why would you declare your class as an abstract class?
+
+Abstract classes are similar to interfaces, with them it is possible to declare fields that are not static and final and define public, protected, and private concrete methods.
+
+Consider using abstract classes if any of these statements apply to your situation:
+
+a,You want to share code among several closely related classes.
+
+b,You expect that classes that extend your abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).
+
+c,You want to declare non-static or non-final fields. This enables you to define methods that can access and modify the state of the object to which they belong.
