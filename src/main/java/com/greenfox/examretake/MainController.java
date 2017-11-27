@@ -16,6 +16,9 @@ public class MainController {
     @Autowired
     Clothing clothing;
 
+    @Autowired
+    ErrorMessage errorMessage;
+
     @GetMapping(value = "/warehouse")
     public String warehouse(Model model){
         model.addAttribute("cloths" , clothingRepo.findAll());
@@ -33,8 +36,9 @@ public class MainController {
     @GetMapping("/warehouse/query")
     public ApiResponse api(@RequestParam float price){
         if (clothing.getPrice() < 50.0){
-            return new ApiResponse(findAll)
+            return new ApiResponse(clothingRepo.findAllByPriceLessThan(price));
         }
+        return errorMessage.getErrorMessage("TOO MUCH");
     }
 
 
