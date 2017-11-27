@@ -71,4 +71,5 @@ import javax.persistence.Table;
             this.amount = amount;
         }
     }
-}
+
+

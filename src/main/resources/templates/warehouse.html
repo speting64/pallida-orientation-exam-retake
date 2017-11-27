@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Fox Clothing</title>
+</head>
+<body>
+
+<h1>Clothing Repo</h1>
+
+
+<table th:if="${cloths}">
+    <tr>
+        <td>Item name</td>
+        <td>manufacturer</td>
+        <td>Category</td>
+        <td>Size</td>
+        <td>Quantity</td>
+        <td>Price</td>
+    </tr>
+    <tr th:each="cloth : ${cloths}" th:object="${cloth}">
+        <td th:text="*{name}">Plate</td>
+        <td th:text="*{manufacturer}">Plate</td>
+        <td th:text="*{category}">Plate</td>
+        <td th:text="*{name}">Plate</td>
+        <td th:text="*{name}">Plate</td>
+        <td th:text="*{name}">Plate</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+
+</body>
+</html>
