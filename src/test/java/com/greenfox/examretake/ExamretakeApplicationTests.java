@@ -39,4 +39,10 @@ public class ExamretakeApplicationTests {
 		this.mockMvc = webAppContextSetup(webApplicationContext).build();
 	}
 
+	@Test
+	public void testForPageNotFound() throws Exception {
+		mockMvc.perform(get("/warehouse"))
+				.andExpect(status().is4xxClientError());
+	}
+
 }
