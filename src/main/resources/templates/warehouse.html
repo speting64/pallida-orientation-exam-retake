@@ -19,12 +19,12 @@
         <td>Price</td>
     </tr>
     <tr th:each="cloth : ${cloths}" th:object="${cloth}">
-        <td th:text="*{name}">Plate</td>
-        <td th:text="*{manufacturer}">Plate</td>
-        <td th:text="*{category}">Plate</td>
-        <td th:text="*{size}">Plate</td>
-        <td th:text="*{price}">Plate</td>
-        <td th:text="*{amount}">Plate</td>
+        <td th:text="*{name}">Name</td>
+        <td th:text="*{manufacturer}">manufacturer</td>
+        <td th:text="*{category}">Category</td>
+        <td th:text="*{size}">Size</td>
+        <td th:text="*{price}">Quantity</td>
+        <td th:text="*{amount}">Price</td>
     </tr>
 </table>
 
