@@ -44,7 +44,4 @@ public class ExamretakeApplicationTests {
 		mockMvc.perform(get("/warehouse"))
 				.andExpect(status().is4xxClientError());
 	}
-
-
-
 }
