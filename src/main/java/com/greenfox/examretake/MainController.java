@@ -18,7 +18,11 @@ public class MainController {
         return "warehouse";
     }
 
-    /*@Postmapping("/warehouse/summary")
-    public String summary;*/
+    @PostMapping("/warehouse/summary")
+    public String summary(Model model){
+
+        model.addAttribute()
+
+    }
 
 }
